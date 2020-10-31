@@ -7,11 +7,11 @@ interface TimerState {
     minutes: number
 }
 
-type TimerProps = {
-    startTime: "number"
+interface TimerProps {
+    time: number
 }
 
-const Timer: React.FC<Props> = ({ time }) => {
+const Timer: React.FC<TimerProps> = ({ time }) => {
     const [state, setState] = React.useState<TimerState>({
         time,
         seconds: time - Math.floor((time - 1) / 60) * 60 - 1,
