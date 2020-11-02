@@ -5,9 +5,9 @@ import Timer from './components/Timer'
 
 export default function App() {
 
-
+  const oneRound = 300
 
   return (
-    <View style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}><Timer time={400} /></View>
+    <View style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}><Timer time={oneRound} /></View>
   )
 }
