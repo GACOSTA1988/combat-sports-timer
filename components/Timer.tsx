@@ -33,7 +33,12 @@ const Timer: React.FC<TimerProps> = ({ time }) => {
     }, [state.time])
 
     return <View style={styles.textContainer}>
-        <Text >{`${state.minutes}:${state.seconds <= 10 ? `0${state.seconds}` : state.seconds}`}</Text>
+        <Text style={styles.timerText}>
+            {`${state.minutes}:${state.seconds <= 10 ?
+                `0${state.seconds}` :
+                state.seconds}`
+            }
+        </Text>
     </View>
 }
 
@@ -47,5 +52,8 @@ const styles = StyleSheet.create({
         backgroundColor: "grey",
         padding: 35,
         borderRadius: 5,
+    },
+    timerText: {
+        fontSize: 40,
     },
 });
