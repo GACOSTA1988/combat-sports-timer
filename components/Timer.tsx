@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 interface TimerState {
     time: number
@@ -32,9 +32,19 @@ const Timer: React.FC<TimerProps> = ({ time }) => {
         }, 1000)
     }, [state.time])
 
-    return <View>
-        <Text>{`${state.minutes}:${state.seconds <= 10 ? `0${state.seconds}` : state.seconds}`}</Text>
+    return <View style={styles.textContainer}>
+        <Text >{`${state.minutes}:${state.seconds <= 10 ? `0${state.seconds}` : state.seconds}`}</Text>
     </View>
 }
 
 export default Timer
+
+const styles = StyleSheet.create({
+    textContainer: {
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "grey",
+        padding: 35
+    },
+});
