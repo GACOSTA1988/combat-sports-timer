@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "grey",
-        padding: 35
+        padding: 35,
+        borderRadius: 5,
     },
 });
