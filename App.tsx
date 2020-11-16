@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "black",
     padding: 20,
-    marginVertical: 25,
+    marginVertical: "20%",
   },
 });
