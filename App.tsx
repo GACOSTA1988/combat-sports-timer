@@ -8,12 +8,14 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Timer time={oneRound} />
-      <Button>
-        <Text>start!</Text>
-      </Button>
-      <Button>
-        <Text>stop!</Text>
-      </Button>
+      <View style={{ display: "flex", flexDirection: "row", marginVertical: "5%" }}>
+        <Button style={{ marginRight: "2%" }} success>
+          <Text>start!</Text>
+        </Button>
+        <Button style={{ marginLeft: "2%" }}>
+          <Text>stop!</Text>
+        </Button>
+      </View>
     </View >
   )
 }
